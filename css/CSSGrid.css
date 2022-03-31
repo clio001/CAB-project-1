@@ -1,0 +1,352 @@
+/* 
+ - - - - - - - - - - - - - - - - - - -
+| CSS FILE FOR ETHICAL CODING WEBSITE |
+ - - - - - - - - - - - - - - - - - - - 
+| Project root: /Users/John/Desktop/Code Academy Berlin/Project 1/Sprint 1/Ethical Coding Website/
+|   index.html
+|   guidelines.html
+|   newsletter.html
+|   contact.html
+|   CSSGrid.css
+|   confirmation-page.js
+|                                      
+| Table of contents:                   
+|   1. HTML tags
+|   2. Grid container
+|   3. Navbar
+|   4. Button
+|   5. Form elements
+|   6. IDs
+|   7. Animation
+ - - - - - - - - - - - - - - - - - - -*/
+
+
+/* || 1. HTML tags */
+
+a {
+    text-decoration: none;
+    color: white;
+}
+
+body {
+    margin: 0px;
+    height: 100%;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+h1 {
+    margin-left: 20px;
+    font-family: 'Allerta Stencil', sans-serif;
+    color: white;
+}
+
+h2 {
+    font-family: 'Allerta Stencil', sans-serif;
+}
+
+h3 {
+    font-family: 'Allerta Stencil', sans-serif;
+}
+
+iframe {
+    width: 100%;
+    height: 100%;
+}
+
+img {
+    width: 100%;    
+}
+
+table {
+    background-color: #05668d;
+    width: 100%;
+    padding: 25px;
+    border-radius: 25px;
+    margin: 0px 0px 20px 0px;
+}
+
+table a:hover {
+    color: lightskyblue;
+}
+
+th {
+    text-align: left;
+    height: 25px;
+    padding: 5px
+}
+
+td {
+    padding: 5px;
+    vertical-align: top;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+
+/* || 2. GRID CONTAINER  */
+
+.container {
+    width: 100%;
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 10% auto 8%;
+    grid-template-areas:
+        "header header header header"
+        "mainl mainl mainr mainr"
+        "footer footer footer footer";   
+}
+
+.container-onebody {
+    width: 100%;
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 10% auto 10%;
+    grid-template-areas:
+        "header header header header"
+        "main main main main"
+        "footer footer footer footer";
+}
+
+.container-header {
+    background-color: #05668d;
+    grid-area: header;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    opacity: 0.7;
+}
+
+.container-main-left {
+    background-color: #00a896;
+    grid-area: mainl;
+    overflow: hidden;
+    background-image: url('../img/code-snapshot.png') ;
+    background-size: cover;
+    background-position: center;
+}
+
+.container-main-left-noimg {
+    background-color: #00a896;
+    grid-area: main;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container-map-left {
+    background-color: #00a896;
+    grid-area: mainl;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container-main-right {
+    background-color: #028090;
+    color: white;
+    padding: 100px;
+    grid-area: mainr;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items:center;
+    font-family: 'Allerta Stencil';
+    font-size: 2em;
+}
+
+.container-footer {
+    grid-area: footer;
+    background-color: #f0f3bd;
+    font-family: 'Allerta Stencil', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: black;
+}
+
+.container-main-terms-submit {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 20px 0 20px 0;
+}
+
+
+/* || 3. NAVBAR  */
+
+.navbar {
+    display: flex;
+}
+
+.nav-item {
+    padding: 15px;
+    height: 100%;
+    color: white;
+}
+
+.navbar-item-active {
+    background-color: #05668d;
+    border-style: solid;
+    border-bottom-style:dotted ;
+    border-top-style: none;
+    border-left-style: none;
+    border-right-style: none;
+}
+
+.search-field {
+    margin-right: 10px; 
+}
+
+
+/* || 4. BUTTON  */
+
+.button {
+    width: 250px;
+    padding: 10px;
+    border-radius: 25px;
+    border-style: solid;
+    border-width: thin;
+    background-color: #028090;
+    border-color: white;
+    color: white;
+    font-size: 18px;
+    text-align: center;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.button:hover {
+    background-color: white;
+    color: #028090;
+}
+
+.nav-button {
+    width: 100px;
+    padding: 10px;
+    border-radius: 25px;
+    background-color: #05668d;
+    border-color: white;
+    color: white;
+    font-size: 16px;
+    text-align: center;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.nav-button:hover {
+    background-color: white;
+    color: #028090;
+    transform: scale(1..05);
+}
+
+
+/* || 5. FORM ELEMENTS */
+
+#submit-button {
+    margin-top: 20px;
+}
+
+.input-field {
+    border-radius: 25px;
+    padding: 10px;
+    width: 200px;
+    border-style: none;
+}
+
+.container-main {
+    display: flex;
+    flex-flow: column wrap;
+    align-items: center;
+    width: 50%;
+    height: max-content;
+    background-color: #028090;
+    padding: 25px;
+    border-radius: 25px;
+    margin: 15px 0px 15px 0px;
+}
+
+.container-main-inputtext {
+    display: flex;
+    flex-flow: row wrap;
+}
+
+div.inputtext-item {
+    margin: 20px;
+}
+
+#fname, #lname, #useremail, #language {
+    width: 250px;
+    padding: 10px;
+    border-radius: 25px;
+    border-style: none;
+    margin-top: 5px;
+}
+
+.container-main-radio-checkbox {
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 30px;
+}
+
+div.headline-radio {
+    display: flex;
+    flex-flow: column;
+}
+
+div.input-radio {
+    margin-right: 126px;
+}
+
+.terms-conditions {
+    font-family: 'Courier New', Courier, monospace;
+    font-size: smaller;
+    margin-top: 20px;
+}
+
+
+/* || 6. IDs */
+
+#footer-links {
+    color: black;
+}
+
+#footer-links:hover {
+    color: grey;
+}
+
+#zitat {
+    font-size: 18px;
+}
+
+
+/* || 7. ANIMATION */
+
+.input-confirmation-animation {
+    height: 90px;
+    animation-name: SuccessAni;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes SuccessAni {
+    0% {
+        color: #05668d;
+        font-size: 0px;
+    }
+
+    50% {
+        color: white;
+        font-size: 90px;
+    }
+
+    100% {
+        color: #00a896;
+        font-size: 70px;
+    }
+    
+}

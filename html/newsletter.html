@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/CSSGrid.css">
+    <link href="https://fonts.googleapis.com/css2?family=Allerta+Stencil&family=Hurricane&display=swap" rel="stylesheet">
+    <script src="../js/confirmation-page.js"></script>
+    <title>Ethical Coding | Sign-up</title>
+</head>
+<body>
+    <!--GRID PARENT-->
+    <div class="container-onebody">
+
+        <!--GRID CHILD: HEADER > H1 + NAVBAR + SEARCH FIELD-->
+        <header class="container-header">
+            <h1><a href="../index.html">ETHICAL CODING CONSULTING</a></h1>
+            <div class="navbar">
+                <a href="../index.html"><div class="nav-button">Home</div></a>
+                <a href="guidelines.html"><div class="nav-button">Resources</div></a>
+                <a href="newsletter.html"><div class="nav-button navbar-item-active">Sign-up</div></a>
+                <a href="contact.html"><div class="nav-button">Contact</div></a>
+            </div>
+            <div class="search-field">
+                <input type="search" class="input-field" placeholder="Search ...">
+            </div>
+        </header>
+
+        <!--GRID CHILD: MAIN > FORM + TERMS & CONDITIONS-->
+        <div class="container-main-left-noimg">
+            <div class="container-main" id="confirmation-output">
+                <h2>Join the community</h2>
+                <form>
+                    <!--Firstname, lastname, email, language-->
+                    <h3>Enter your contact information:</h3>
+                    <div class="container-main-inputtext">                        
+                        <div class="inputtext-item">
+                            <label for="fname">First name:</label><br>
+                            <input type="text" id="fname" name="fname" placeholder="Jane" autofocus required>
+                        </div>
+                        <div class="inputtext-item">
+                            <label for="lname">Last name:</label><br>
+                            <input type="text" id="lname" name="lname" placeholder="Doe" required>
+                        </div>
+                        <div class="inputtext-item">
+                            <label for="useremail">Email:</label><br>
+                            <input type="email" id="useremail" name="useremail" placeholder="janedoe@earthpost.org" required>
+                        </div>
+                        <div class="inputtext-item">
+                            <label for="language">Select a language:</label><br>
+                            <select id="language" name="language">
+                                <option value="English">English</option>
+                                <option value="German">German</option>
+                                <option value="Spanish">Spanish</option>
+                                <option value="Nahuatl">Nahuatl</option>
+                                <option value="Inuktitut">Inuktitut</option>
+                            </select>
+                        </div>
+                    </div>
+            
+                    <!--Frequency and topics-->
+                    
+                    <div class="container-main-radio-checkbox">
+                        <div class="headline-radio">
+                            <div>
+                                <h3>Choose a delivery frequency:</h3>
+                            </div>
+                            <div class="input-radio">
+                                <input type="radio" id="daily" name="frequency" checked>
+                                <label for="daily">Daily</label>
+                                
+                                <input type="radio" id="weekly" name="frequency">
+                                <label for="weekly">Weekly</label>
+                                                    
+                                <input type="radio" id="monthly" name="frequency">
+                                <label for="monthly">Monthly</label>
+                            </div>
+                        </div>
+                        <div class="headline-checkbox">
+                            <div>
+                                <h3>Select your topics:</h3>
+                            </div>
+                            <div class="input-checkbox" id="checkbox-input">
+                                <input type="checkbox" id="design" name="design">
+                                <label for="design">Design</label><br>
+            
+                                <input type="checkbox" id="software_development" name="software_development">
+                                <label for="software_development">Software development</label><br>
+            
+                                <input type="checkbox" id="WCAG" name="wcag">
+                                <label for="WCAG">WCAG 2.1 updates</label><br>
+            
+                                <input type="checkbox" id="datascience" name="datascience">
+                                <label for="datascience">Data science</label><br>
+            
+                                <input type="checkbox" id="accesscoding" name="accesscoding">
+                                <label for="accesscoding">Accessability and Coding</label>
+                            </div>
+                        </div>
+                    </div>
+            
+                    <!--Terms checkbox and submit button-->
+                    <div class="container-main-terms-submit">
+                        <div class="terms-submit-termsconditions">
+                            <input type="checkbox" id="terms-conditions" name="terms-conditions" required>
+                            <label for="terms-conditions">Please, accept the Terms & Conditions</label>
+                        </div>
+                        <button type="submit" class="button" id="submit-button" onclick="OutputDataFinal()" value="Submit">Submit</button>
+                    </div>
+                </form>
+
+                <!--TERMS AND CONDITIONS-->
+                <div class="terms-conditions">
+                    <hr>
+                    <h3>Terms & Conditions</h3>
+                    <p>The following Terms & Conditions were last updated on March 23, 2022. All users subscribing to the Ethical Coding Consulting (ECC) newsletter are subject to the terms and conditions as set out in the most recent version of the ECC's Terms & Conditions.</p>
+                    <ol type="1">
+                        <li>Names and parties</li>
+                            <ol type="a">
+                                <li>The owner of the company will be known as "Ethical Coding Consulting (ECC)".</li>
+                                <li>The subscriber to the newsletter will be refered to as the "Subscriber".</li>
+                                <li>The platform used to subscribe to the newsletter will be known as "The Website".</li>
+                            </ol>
+                        <li>Validity of the terms</li>
+                            <ol type="a">
+                                <li>The most recent Terms & Conditions were updated on March 23, 2022, and continue to apply for all future subscriptions.</li>
+                                <li>A subscrition is considered canceled once the Subscriber submits a cancelation email to ECC.</li>
+                            </ol>
+                        <li>etc. etc. etc.</li>
+                    </ol>
+                </div>
+            </div>            
+        </div>
+
+        <!--GRID-CHILD: FOOTER > CONTACT INFORMATION-->
+        <footer class="container-footer">
+            <p>Copyrights &#169; 2022 | <a href="mailto:info@ethicalcoding.org" id="footer-links">info@ethicalcoding.org</a> | <a href="index.html" id="footer-links">ethicalcoding.org</a></p>
+        </footer>
+    </div>
+</body>
+</html>
